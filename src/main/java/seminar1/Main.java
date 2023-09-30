@@ -39,5 +39,9 @@ public class Main {
 
         // сокрыта реализация метода жизненного цикла кота - поломать ее не смогут
         barsik.lifeCycle();
+
+        Bird solovey = new Bird("Solovey", 1, Alex, LocalDate.now(),null,Color.BLACK);
+        solovey.toSwim();
+        barsik.toFly();
     }
 }

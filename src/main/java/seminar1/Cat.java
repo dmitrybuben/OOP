@@ -13,4 +13,9 @@ public class Cat extends Animal{
     public String getBreed() {
         return breed;
     }
+
+    @Override
+    protected void toFly() {
+        System.out.println("I can't fly!");
+    }
 }
