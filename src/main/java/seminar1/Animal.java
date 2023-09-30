@@ -13,6 +13,13 @@ public class Animal {
     // константа, отражающая название класса с инициализацией не через конструктор, а через this
     protected final String TYPE = this.getClass().getSimpleName();
 
+    protected void toFly(){
+        System.out.println(this.TYPE + " fly");
+    }
+    protected void toSwim(){
+        System.out.println(this.TYPE + " swim");
+    }
+
     private void wakeUp() {
         System.out.println(this.TYPE + " woke Up");
     }
