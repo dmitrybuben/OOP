@@ -1,15 +1,18 @@
 package seminar1;
 
+import seminar2.Illable;
+
 import java.time.LocalDate;
 import java.util.List;
 
-public class Animal {
+public class Animal implements Illable {
     protected String name;
     protected double weight;
     protected Owner owner;
     protected LocalDate birthDay;
     protected List<Vaccination> vaccinations;
     protected Color color;
+
     // константа, отражающая название класса с инициализацией не через конструктор, а через this
     protected final String TYPE = this.getClass().getSimpleName();
 
@@ -90,6 +93,10 @@ public class Animal {
         this(name, weight, owner, birthDay, null, color);
     }
 
+    public Animal(String name) {
+        this.name = name;
+    }
+
     // Инкапсуляция - реализация жизненного цикла кота в виде метода Public строго в определенном,
     // неизменяемом извне порядке, а отдельные методы становятся Private
     public void lifeCycle(){
@@ -98,5 +105,10 @@ public class Animal {
         eat();
         toPlay();
         goToSleep();
+    }
+
+    @Override
+    public void heal() {
+        System.out.println("Veterinar heals " + this.getTYPE());
     }
 }

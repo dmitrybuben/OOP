@@ -1,5 +1,7 @@
 package seminar1;
 
+import seminar2.Illable;
+
 import java.time.LocalDate;
 import java.util.List;
 
@@ -8,6 +10,10 @@ public class Cat extends Animal{
     public Cat(String name, double weight, Owner owner, LocalDate birthDay, List<Vaccination> vaccinations, Color color, String breed) {
         super(name, weight, owner, birthDay, vaccinations, color);
         this.breed = breed;
+    }
+
+    public Cat(String name) {
+        super(name);
     }
 
     public String getBreed() {
